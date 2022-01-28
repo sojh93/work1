@@ -10,7 +10,15 @@ import DayBox from "./component/DayBox";
 
 
 
+function App() {
+  const [list, setList] = React.useState(["월", "화", "수", "목", "금", "토", "일"]);
+const text = React.useRef(null);
 
+const addDayBox = () => {
+  // 스프레드 문법! 기억하고 계신가요? :) 
+  // 원본 배열 list에 새로운 요소를 추가해주었습니다.
+  setList([...list, text.current.value]);
+  }
 <Route path="/" exact>
 
 
